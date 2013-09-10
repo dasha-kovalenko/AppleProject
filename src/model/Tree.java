@@ -2,9 +2,11 @@ package model;
 
 public class Tree {
 	private int appleNumber;
-	
-	public Tree (){
+	private int flowerNumber;
+
+	public Tree() {
 		appleNumber = 1;
+		flowerNumber = 1;
 	}
 
 	public int shake() {
@@ -15,9 +17,18 @@ public class Tree {
 	}
 
 	public int grow() {
-		int number = (int) (Math.random() * 10);
+		int number = (int) (Math.random() * flowerNumber);
 		appleNumber += number;
+		flowerNumber -= number;
 		System.out.println("appleNumber: " + appleNumber);
+		System.out.println("flowerNumber: " + flowerNumber);
+		return number;
+	}
+
+	public int blossom() {
+		int number = (int) (Math.random() * 10);
+		flowerNumber += number;
+		System.out.println("flowerNumber: " + flowerNumber);
 		return number;
 	}
 

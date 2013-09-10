@@ -30,6 +30,8 @@ public class Controller {
 					System.out.println(tree.grow());
 				else if ("shake".equals(command))
 					System.out.println(tree.shake());
+				else if ("blossom".equals(command))
+					System.out.println(tree.blossom());
 				else if ("exit".equals(command))
 					System.exit(0);
 			}
